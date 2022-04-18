@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <br>
+    <div>
+        <table>
+            <tr>
+                <th>PART ID</th>
+                <th>PART NAME</th>
+            </tr>
+            {% for rows in prows %}
+                <tr>
+                    <td>{{ rows[0] }}</td>
+                    <td>{{ rows[1] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div><br><br>
+    <div>
+        <table>
+            <tr>
+                <th>VENDOR ID</th>
+                <th>VENDOR NAME</th>
+            </tr>
+            {% for rows in vrows %}
+                <tr>
+                    <td>{{ rows[0] }}</td>
+                    <td>{{ rows[1] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock body %}
