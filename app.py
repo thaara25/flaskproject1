@@ -5,8 +5,6 @@ from vendors import get_vendors, insert_vendors, delete_vendors, update_vendors,
 
 app = Flask(__name__)
 
-#change made for test
-
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/home', methods=['GET', 'POST'])
