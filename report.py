@@ -4,7 +4,7 @@ from dbconfig import config
 
 def product_vendor(id):
     conn = None
-    sql="SELECT vendors.vendor_id,vendors.vendor_name FROM vendors inner join vendor_parts on vendor_parts.vendor_id = vendors.vendor_id where vendor_parts.part_id=%2"
+    sql="SELECT vendors.vendor_id,vendors.vendor_name FROM vendors inner join vendor_parts on vendor_parts.vendor_id = vendors.vendor_id where vendor_parts.part_id=%s"
     try:
         params = config()
         conn = psycopg2.connect(**params)
