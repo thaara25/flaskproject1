@@ -13,12 +13,8 @@ def home():
     id = request.form.get("pid")
     if request.method == 'POST':
         rows=product_vendor(id)
-        return redirect(url_for('product_availability'))
+        return render_template('product_availability.html', rows=rows)
     return render_template('home.html', rows=rows)
-
-@app.route('/product_availability', methods=['GET', 'POST'])
-def product_availability():
-    return render_template('product_availability.html', rows=rows)
 
 @app.route('/vendor')
 def vendors():
